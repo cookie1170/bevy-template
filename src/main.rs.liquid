@@ -13,6 +13,9 @@ fn main() -> AppExit {
 
     app.add_plugins(
         DefaultPlugins
+{%- if nearest_filter == true %}
+            .set(ImagePlugin::default_nearest())
+{%- endif %}
             .set(AssetPlugin {
                 // wasm builds will check for meta files (that don't exist) if this isn't set
                 // this causes errors and even panics on web build on itch
