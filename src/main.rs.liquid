@@ -13,7 +13,7 @@ fn main() -> AppExit {
 
     app.add_plugins(
         DefaultPlugins
-{%- if nearest_filter == true %}
+{%- if nearest_filter %}
             .set(ImagePlugin::default_nearest())
 {%- endif %}
             .set(AssetPlugin {

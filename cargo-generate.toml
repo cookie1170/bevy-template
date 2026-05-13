@@ -11,7 +11,7 @@ features = { prompt = "Which bevy features would you like?", choices = [
 justfile = { prompt = "Would you like a justfile for publishing to itch.io?", default = true, type = "bool" }
 
 [conditional.'features == "2D"']
-placeholders.nearest_filter = { prompt = "Would you like to use the 'nearest' filter? (for pixel art)", type = "bool" }
+placeholders.nearest_filter = { prompt = "Would you like to use the 'nearest' filter? (for pixel art)", type = "bool", default = false }
 
 [conditional.justfile]
 placeholders.itch = { prompt = "What's your itch.io page?", default = "PLACEHOLDER" }
